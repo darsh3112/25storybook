@@ -21,6 +21,11 @@ body {
   box-shadow: 1px 15px 20px 0px rgba(0, 0, 0, 0.5);
 
   position: absolute;
+
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none;
 }
 
 .paper.heart {
@@ -74,6 +79,12 @@ img {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  user-select: none; /* Disable selection */
+  -webkit-user-drag: none; /* Disable dragging in Safari/Chrome */
+  -webkit-user-select: none; /* Disable selection in Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none;
 }
 .image-container {
   display: flex;
@@ -97,7 +108,7 @@ img {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: #6366f1;
+  background-color: #dda0dd;
   border: none;
   color: white;
   font-size: 18px;
@@ -105,14 +116,14 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 8px rgba(99, 102, 241, 0.2),
-    0 0 0 8px rgba(99, 102, 241, 0.1);
+  box-shadow: 0 4px 8px rgba(203, 128, 216, 0.2),
+    0 0 0 8px rgba(227, 99, 241, 0.1);
   transition: all 0.3s ease;
 }
 
 .play-button:hover {
   transform: scale(1.05);
-  background-color: #4f46e5;
+  background-color: #ba55d3;
 }
 
 .play-button:active {
@@ -120,7 +131,7 @@ img {
 }
 
 .play-icon {
-  margin-left: 4px;
+  margin: 4px;
 }
 
 audio {

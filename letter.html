@@ -22,9 +22,9 @@
       <br />
       <p class="p2">In English : always be with me</p>
       <div class="play-button-container">
-        <p class="p2">In Kannada : we say >></p>
+        <p class="p2">In Kannada : I say >></p>
         <button class="play-button" id="playButton">
-          <span class="play-icon">▶</span>
+          <span class="play-icon">🙂</span>
         </button>
         <audio
           id="audioElement"
@@ -39,7 +39,7 @@
       </div>
     </div>
 
-    <!-- <div class="paper image">
+    <div class="paper image">
       <p class="p1">Happy Birthday................ Gagana❤️!</p>
       <p class="p2">
         Today is your birthday, and even though we’re miles apart,<br />
@@ -173,22 +173,9 @@
           src="https://res.cloudinary.com/dks5ezdut/image/upload/v1753172495/IMG-20250722-WA0006_sgoyie.jpg"
         />
       </div>
-    </div> -->
+    </div>
     <!-- partial -->
-    <script>
-      const audioElement = document.getElementById("audioElement");
-      const playButton = document.getElementById("playButton");
 
-      playButton.addEventListener("click", () => {
-        if (audioElement.paused) {
-          audioElement.play();
-          playButton.innerHTML = '<span class="play-icon">⏸</span>';
-        } else {
-          audioElement.pause();
-          playButton.innerHTML = '<span class="play-icon">▶</span>';
-        }
-      });
-    </script>
     <script src="./script.js"></script>
   </body>
 </html>

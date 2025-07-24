@@ -1,23 +1,3 @@
-const myAudio = document.getElementById("myAudio");
-const playPauseButton = document.getElementById("playPauseButton");
-
-playPauseButton.addEventListener("click", () => {
-  if (myAudio.paused) {
-    myAudio.play();
-    playPauseButton.classList.remove("play-button");
-    playPauseButton.classList.add("pause-button");
-  } else {
-    myAudio.pause();
-    playPauseButton.classList.remove("pause-button");
-    playPauseButton.classList.add("play-button");
-  }
-});
-
-// Optional: Reset button to play when audio ends
-myAudio.addEventListener("ended", () => {
-  playPauseButton.classList.remove("pause-button");
-  playPauseButton.classList.add("play-button");
-});
 let highestZ = 1;
 
 class Paper {
@@ -99,4 +79,17 @@ const papers = Array.from(document.querySelectorAll(".paper"));
 papers.forEach((paper) => {
   const p = new Paper();
   p.init(paper);
+});
+
+const audioElement = document.getElementById("audioElement");
+const playButton = document.getElementById("playButton");
+
+playButton.addEventListener("click", () => {
+  if (audioElement.paused) {
+    audioElement.play();
+    playButton.innerHTML = '<span class="play-icon">🎧</span>';
+  } else {
+    audioElement.pause();
+    playButton.innerHTML = '<span class="play-icon">🙂</span>';
+  }
 });
