@@ -1,3 +1,23 @@
+const myAudio = document.getElementById("myAudio");
+const playPauseButton = document.getElementById("playPauseButton");
+
+playPauseButton.addEventListener("click", () => {
+  if (myAudio.paused) {
+    myAudio.play();
+    playPauseButton.classList.remove("play-button");
+    playPauseButton.classList.add("pause-button");
+  } else {
+    myAudio.pause();
+    playPauseButton.classList.remove("pause-button");
+    playPauseButton.classList.add("play-button");
+  }
+});
+
+// Optional: Reset button to play when audio ends
+myAudio.addEventListener("ended", () => {
+  playPauseButton.classList.remove("pause-button");
+  playPauseButton.classList.add("play-button");
+});
 let highestZ = 1;
 
 class Paper {

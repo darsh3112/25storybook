@@ -9,10 +9,37 @@
     />
     <link rel="stylesheet" href="./styleTwo.css" />
   </head>
+
   <body>
     <div class="paper heart"></div>
 
     <div class="paper image">
+      <p class="p1">Please don’t forget me</p>
+      <p class="p2">
+        No matter how far apart we get, <br />or how busy life becomes, <br />I
+        hope you’ll always hold our memories close.🌈
+      </p>
+      <br />
+      <p class="p2">In English : always be with me</p>
+      <div class="play-button-container">
+        <p class="p2">In Kannada : we say >></p>
+        <button class="play-button" id="playButton">
+          <span class="play-icon">▶</span>
+        </button>
+        <audio
+          id="audioElement"
+          src="https://res.cloudinary.com/dks5ezdut/video/upload/v1753286104/iru_jothe_ho6gsf.mp3"
+        ></audio>
+      </div>
+
+      <div class="image-container">
+        <img
+          src="https://res.cloudinary.com/dks5ezdut/image/upload/v1753172415/IMG-20250722-WA0010_fbtnf0.jpg"
+        />
+      </div>
+    </div>
+
+    <!-- <div class="paper image">
       <p class="p1">Happy Birthday................ Gagana❤️!</p>
       <p class="p2">
         Today is your birthday, and even though we’re miles apart,<br />
@@ -42,19 +69,6 @@
             src="https://res.cloudinary.com/dks5ezdut/image/upload/v1753172418/IMG-20250722-WA0003_s5oekr.jpg"
           />
         </div>
-      </div>
-    </div>
-
-    <div class="paper image">
-      <p class="p1">Please don’t forget me</p>
-      <p class="p2">
-        No matter how far apart we get, <br />or how busy life becomes, <br />I
-        hope you’ll always hold our memories close.🌈
-      </p>
-      <div class="image-container">
-        <img
-          src="https://res.cloudinary.com/dks5ezdut/image/upload/v1753172415/IMG-20250722-WA0010_fbtnf0.jpg"
-        />
       </div>
     </div>
 
@@ -159,8 +173,22 @@
           src="https://res.cloudinary.com/dks5ezdut/image/upload/v1753172495/IMG-20250722-WA0006_sgoyie.jpg"
         />
       </div>
-    </div>
+    </div> -->
     <!-- partial -->
+    <script>
+      const audioElement = document.getElementById("audioElement");
+      const playButton = document.getElementById("playButton");
+
+      playButton.addEventListener("click", () => {
+        if (audioElement.paused) {
+          audioElement.play();
+          playButton.innerHTML = '<span class="play-icon">⏸</span>';
+        } else {
+          audioElement.pause();
+          playButton.innerHTML = '<span class="play-icon">▶</span>';
+        }
+      });
+    </script>
     <script src="./script.js"></script>
   </body>
 </html>
